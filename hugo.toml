@@ -1,4 +1,4 @@
-baseURL = 'https://YubinghanBai.github.io/myblog/'
+baseURL = 'https://myblog.pages.dev/'
 # Default content language
 defaultContentLanguage = 'en'
 # Language code
@@ -63,7 +63,7 @@ theme = 'FixIt'
   [params.home.profile]
     enable = true
     # Avatar URL (relative to baseURL)
-    avatarURL = "/myblog/images/avatar.jpg"
+    avatarURL = "/images/avatar.jpg"
     title = "Yubinghan Bai"
     # Subtitle with typing animation
     subtitle = "Software Engineer | Tech Enthusiast | Lifelong Learner"
