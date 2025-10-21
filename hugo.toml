@@ -32,7 +32,9 @@ theme = 'FixIt'
 
 
 [outputs]
+  _merge = "shallow"
   home = ["html", "rss", "archives", "search"]
+
 [taxonomies]
   _merge = "shallow"
 
