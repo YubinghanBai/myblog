@@ -54,8 +54,8 @@ theme = 'FixIt'
 [params.home]
   [params.home.profile]
     enable = true
-    # Avatar URL
-    avatarURL = "/images/avatar.jpg"
+    # Avatar URL (relative to baseURL)
+    avatarURL = "/myblog/images/avatar.jpg"
     title = "Yubinghan Bai"
     # Subtitle with typing animation
     subtitle = "Software Engineer | Tech Enthusiast | Lifelong Learner"
@@ -122,9 +122,9 @@ theme = 'FixIt'
     # Whether to use typeit animation for title name
     typeit = false
 
-# Custom CSS
-[params.customCSS]
-  files = ["css/custom.css"]
+# Custom CSS and JS
+[params.customFilePath]
+  style = "css/custom.css"
 
 # Footer configuration
 [params.footer]
@@ -174,14 +174,14 @@ boxed = true
     repoId = "R_kgDOQGdXoA"
     category = "Announcements"
     categoryId = "DIC_kwDOQGdXoM4Cw5hQ"
+    lang = "en"
     mapping = "pathname"
-    strict = "0"
-    reactionsEnabled = "1"
-    emitMetadata = "0"
+    reactionsEnabled = true
+    emitMetadata = false
     inputPosition = "bottom"
     lightTheme = "light"
     darkTheme = "dark"
-    lazyLoading = true
+    lazyLoading = false
 
 [params.page]
     [params.page.math]
