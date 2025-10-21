@@ -31,10 +31,6 @@ theme = 'FixIt'
       description = "软件工程师 | 技术博客"
 
 
-[outputs]
-  _merge = "shallow"
-  home = ["html", "rss", "archives", "search"]
-
 [taxonomies]
   _merge = "shallow"
 
