@@ -12,9 +12,6 @@ theme = 'FixIt'
   [security.funcs]
     getenv = ['^HUGO_', '^CI$']
 
-[outputs]
-  _merge = "deep"
-
 # Multilanguage configuration
 [languages]
   [languages.en]
