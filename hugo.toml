@@ -7,6 +7,14 @@ title = "Yubinghan's Blog"
 
 theme = 'FixIt'
 
+# Security settings for Giscus
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+
+[outputs]
+  _merge = "deep"
+
 # Multilanguage configuration
 [languages]
   [languages.en]
