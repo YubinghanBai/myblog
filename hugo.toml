@@ -1,0 +1,240 @@
+baseURL = 'https://YubinghanBai.github.io/Myblog/'
+# Default content language
+defaultContentLanguage = 'en'
+# Language code
+languageCode = 'en-us'
+title = "Yubinghan's Blog"
+
+theme = 'FixIt'
+
+# Multilanguage configuration
+[languages]
+  [languages.en]
+    weight = 1
+    languageCode = "en-US"
+    languageName = "English"
+    title = "Yubinghan's Blog"
+    [languages.en.params]
+      description = "Software Engineer | Tech Blog"
+
+  [languages.zh-cn]
+    weight = 2
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    title = "Yubinghan 的博客"
+    [languages.zh-cn.params]
+      description = "软件工程师 | 技术博客"
+
+
+[outputs]
+  home = ["html", "rss", "archives", "search"]
+[taxonomies]
+  _merge = "shallow"
+
+
+
+[markup]
+ _merge = "shallow"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)'], ['$', '$']]
+
+[params]
+# Author information
+[params.author]
+  name = "Yubinghan Bai"
+  email = "yubinghanbai@gmail.com"
+  link = "https://github.com/YubinghanBai"
+
+# Home page profile
+[params.home]
+  [params.home.profile]
+    enable = true
+    # Avatar URL
+    avatarURL = "/images/avatar.jpg"
+    title = "Yubinghan Bai"
+    # Subtitle with typing animation
+    subtitle = "Software Engineer | Tech Enthusiast | Lifelong Learner"
+    # Enable typing animation
+    typeit = true
+    # Display social links
+    social = true
+    # Disclaimer (optional)
+    disclaimer = ""
+
+# Social links configuration
+[params.social]
+  GitHub = "YubinghanBai"
+  Linkedin = "yubinghan-bai-b5923a340"
+  Email = "yubinghanbai@gmail.com"
+  RSS = true
+
+# Search configuration
+[params.search]
+  enable = true
+  # Type of search engine ["algolia", "fuse"]
+  type = "fuse"
+  # Max index length of the chunked content
+  contentLength = 4000
+  # Placeholder of the search bar
+  placeholder = "Search..."
+  # Max number of results length
+  maxResultLength = 10
+  # Snippet length of the result
+  snippetLength = 50
+  # HTML tag name of the highlight part in results
+  highlightTag = "em"
+  # Whether to use the absolute URL based on the baseURL in search index
+  absoluteURL = false
+
+  [params.search.fuse]
+    # Fuse.js options
+    isCaseSensitive = false
+    minMatchCharLength = 2
+    findAllMatches = false
+    location = 0
+    threshold = 0.3
+    distance = 100
+    ignoreLocation = false
+    useExtendedSearch = false
+    ignoreFieldNorm = false
+
+# Header configuration
+[params.header]
+  # Desktop header mode ["sticky", "normal", "auto"]
+  desktopMode = "sticky"
+  # Mobile header mode ["sticky", "normal", "auto"]
+  mobileMode = "auto"
+
+  [params.header.title]
+    # URL of the LOGO
+    logo = ""
+    # Title name
+    name = "Yubinghan's Blog"
+    # You can add extra information before the name (HTML format is supported), such as icons
+    pre = ""
+    # You can add extra information after the name (HTML format is supported), such as icons
+    post = ""
+    # Whether to use typeit animation for title name
+    typeit = false
+
+# Custom CSS
+[params.customCSS]
+  files = ["css/custom.css"]
+
+# Footer configuration
+[params.footer]
+  enable = true
+  copyright = true
+  author = true
+  since = 2025
+
+  [params.footer.powered]
+    enable = true
+    hugoLogo = true
+    themeLogo = true
+
+  # Site runtime with heartbeat
+  [params.footer.siteTime]
+    enable = true
+    animate = true
+    icon = "fa-solid fa-heartbeat"
+    pre = ""
+    value = "2025-10-21T00:00:00-05:00"
+
+  [params.footer.order]
+    powered = 1
+    copyright = 0
+    statistics = 2
+    visitor = 3
+    beian = 4
+
+# Busuanzi visitor statistics
+[params.busuanzi]
+  enable = true
+  siteViews = true
+
+[params.jsonViewer]
+enable = true
+expandDepth = 1
+copyable = true
+sort = false
+boxed = true
+
+# Comment system configuration
+[params.page.comment]
+  enable = true
+  [params.page.comment.giscus]
+    enable = true
+    repo = "YubinghanBai/YubinghanBai"
+    repoId = "R_kgDOQGdXoA"
+    category = "Announcements"
+    categoryId = "DIC_kwDOQGdXoM4Cw5hQ"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lightTheme = "light"
+    darkTheme = "dark"
+    lazyLoading = true
+
+[params.page]
+    [params.page.math]
+      enable = true
+      type = "mathjax"
+      # MathJax server-side rendering (https://www.mathjax.org)
+      # MathJax config: https://docs.mathjax.org/en/latest/options/index.html
+      [params.page.math.mathjax]
+        cdn = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+        [params.page.math.mathjax.packages]
+          # '[+]' = ['configmacros']
+        # custom macros map
+        # syntax: <macro> = <definition>
+        [params.page.math.mathjax.macros]
+          # "bold" = ["{\\bf #1}", 1]   # usage: $\bold{math}$
+        [params.page.math.mathjax.loader]
+          load = ['ui/safe']
+          [params.page.math.mathjax.loader.paths]
+            # custom = "https://cdn.jsdelivr.net/gh/sonoisa/XyJax-v3@3.0.1/build/"
+          # more loader config e.g source, dependencies, provides etc.
+        [params.page.math.mathjax.options]
+          enableMenu = true
+          # HTML tags that won't be searched for math
+          skipHtmlTags = [
+            "script",
+            "noscript",
+            "style",
+            "textarea",
+            "pre",
+            "code",
+            "math",
+            "select",
+            "option",
+            "mjx-container"
+          ]
+          # class that marks tags not to search
+          ignoreHtmlClass = "mathjax_ignore"
+          # HTML tags that can appear within math
+          [params.page.math.mathjax.options.includeHtmlTags]
+            # "#comment" = ""
+            # br = "\n"
+            # wbr = ""
+
+[params.mermaid]
+    cdn = ""
+    zenuml = ""
+    themes = ["default", "dark"]
+    # optional values: ["strict", "loose", "antiscript", "sandbox"]
+    securityLevel = "loose"
+    # optional values: ["classic", "handDrawn"]
+    look = "handDrawn"
+    fontFamily = ""
+    layoutLoaders = []
+    layout = "dagre"
+
+

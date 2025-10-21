@@ -1,0 +1,36 @@
+/* Custom Font - Georgia */
+
+/* Main content font */
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Article content */
+.content,
+.single .content,
+.post-content {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Headings can use a different font if you prefer */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+}
+
+/* Code blocks keep monospace font */
+code,
+pre,
+.highlight {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Profile title */
+.home-profile .home-title {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Profile subtitle */
+.home-profile .home-subtitle {
+  font-family: Georgia, 'Times New Roman', serif;
+}
