@@ -34,7 +34,52 @@ theme = 'FixIt'
 [taxonomies]
   _merge = "shallow"
 
+# Menu Configuration
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    title = "All Posts"
+    weight = 1
+    [menu.main.params]
+      icon = "fa-solid fa-newspaper"
 
+  [[menu.main]]
+    identifier = "archives"
+    name = "Archives"
+    url = "/archives/"
+    title = "Archives"
+    weight = 2
+    [menu.main.params]
+      icon = "fa-solid fa-archive"
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    title = "Categories"
+    weight = 3
+    [menu.main.params]
+      icon = "fa-solid fa-folder-tree"
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    title = "Tags"
+    weight = 4
+    [menu.main.params]
+      icon = "fa-solid fa-tags"
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    title = "About Me"
+    weight = 5
+    [menu.main.params]
+      icon = "fa-solid fa-user"
 
 [markup]
  _merge = "shallow"
